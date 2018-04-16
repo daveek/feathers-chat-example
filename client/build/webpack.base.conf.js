@@ -62,5 +62,9 @@ module.exports = {
   },
   eslint: {
     formatter: require('eslint-friendly-formatter')
-  }
+  },
+  performance: {
+    hints: false
+  },
+  devtool: '#eval-source-map'
 }

@@ -5,7 +5,7 @@
     <ul>
       <li v-for="message in messages">
         <span>{{ message.text }}</span>
-        <span @click="tryRemoveMessage(message)">x</span>
+        <button @click="tryRemoveMessage">x</button>
       </li>
     </ul>
   </div>
@@ -48,7 +48,7 @@
       },
       tryRemoveMessage (message) {
         // Remove message from the db
-        services.messageService.remove(message)
+        services.messageService.remove(this.message)
       }
     }
   }
